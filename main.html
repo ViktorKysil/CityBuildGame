@@ -8,27 +8,59 @@
     <title>Build Skylines</title>
   </head>
   <body>
+    <!-- <h1>Build Skylines</h1> -->
+    <img src="/assets/images/logov2.svg" alt="" id="logo" />
     <div id="main-frame">
-      <img src="/assets/images/game-logo.svg" alt="" id="logo">
-      <div id="score-frame">
-        <img src="/assets/images/coin.svg" alt="" />
-        <h2 id="score" class="bruh">1</h2>
+      <div id="side-buttons">
+        <button class="side-btn" onclick="restart()">
+          <img src="/assets/images/office-logo.svg" alt="" />
+        </button>
+
+        <button class="side-btn" onclick="restart()">
+          <img src="/assets/images/factory.svg" alt="" />
+        </button>
+
+        <button class="side-btn" onclick="restart()">
+          <img src="/assets/images/plane.svg" alt="" />
+        </button>
       </div>
+
       <div id="clicker" onclick="addScore()">
         <img src="/assets/images/house-main.svg" alt="" />
       </div>
 
-      <div id="btns">
-        <button id="buy-btn" onclick="hire()">
-          <img src="/assets/images/hire-human.svg" alt="" /><span
-            class="purchased"
-            id="worker"
-            >0</span
-          >
+      <div id="bottom-buttons">
+        <button class="bottom-btn" onclick="restart()">
+          <img src="/assets/images/house-main.svg" alt="" />
         </button>
-        <button id="restart-btn" onclick="restart()">
-          <img src="/assets/images/restart.svg" alt="" />
+
+        <button class="bottom-btn" onclick="restart()">
+          <img src="/assets/images/lockv2.svg" alt="" id="lock" />
+          <img src="/assets/images/house-lvl2.svg" alt="" />
         </button>
+
+        <button class="bottom-btn" onclick="restart()">
+          <img src="/assets/images/lockv2.svg" alt="" id="lock" />
+          <img src="/assets/images/house-lvl3.svg" alt="" />
+        </button>
+      </div>
+
+      <div id="info-frame">
+        <div id="score-frame">
+          <img src="/assets/images/coin.svg" alt="" />
+          <h2 id="score" class="bruh">1</h2>
+        </div>
+
+        <div id="btns">
+          <button id="buy-btn" onclick="hire()">
+            <img src="/assets/images/hire-human.svg" alt="" /><span
+              class="purchased"
+              id="worker">No workers</span>
+          </button>
+          <button id="restart-btn" onclick="restart()">
+            <img src="/assets/images/restart.svg" alt="" />
+          </button>
+        </div>
       </div>
     </div>
     <script src="js/main.js"></script>
