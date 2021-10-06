@@ -40,14 +40,13 @@ function refresh() {
             if (count === 0) {
                 clearInterval(interval)
                 hired = 0
-                localStorage.setItem('hiredLeft', count)
+                localStorage.setItem('userWorkers', hired)
                 document.getElementById('worker').innerHTML = 'No workers'
             }
 
             if (hired === 0) {
                 clearInterval(interval)
                 document.getElementById('worker').innerHTML = 'No workers'
-                scorePoint -= 1
             }
 
             scorePoint++
@@ -66,31 +65,32 @@ function restart() {
         localStorage.setItem('userWorkers', hired)
         document.getElementById('worker').innerHTML = 'No workers'
 
-
         scorePoint = 0;
         document.getElementById('score').innerHTML = scorePoint;
         localStorage.setItem('userScore', scorePoint);
 
+        if(count > 0) {
+            count = 0
+            scorePoint = 0
+        }
         // hired = 0;
         // localStorage.removeItem('userWorkers');
         // document.getElementById('workers').innerHTML = hired;
-
-
-
     }
 
 
 }
 
 function hire() {
-    if ((scorePoint >= workerPrice) && (hired === 0)) {
+    if ((scorePoint >= workerPrice) && (hired == 0)) {
         count = 20
         localStorage.setItem('hiredLeft', count)
         hired = 1
+        localStorage.setItem('userWorkers', hired)
 
         scorePoint -= 10
         document.getElementById('score').innerHTML = scorePoint;
-        localStorage.setItem('userWorkers', hired)
+        
 
         var interval = setInterval(() => {
             count -= 1
@@ -99,6 +99,7 @@ function hire() {
             if (count === 0) {
                 clearInterval(interval)
                 hired = 0
+                localStorage.setItem('userWorkers', hired)
                 localStorage.setItem('hiredLeft', count)
                 document.getElementById('worker').innerHTML = 'No workers'
             }
@@ -106,7 +107,6 @@ function hire() {
             if (hired === 0) {
                 clearInterval(interval)
                 document.getElementById('worker').innerHTML = 'No workers'
-                scorePoint -= 1
             }
 
             scorePoint++
