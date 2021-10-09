@@ -7,6 +7,13 @@
 
 html {
   background-color: #222222;
+  background-image: url(/assets/images/city.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  zoom: 130%;
 }
 
 h1 {
@@ -132,11 +139,11 @@ h1 {
   width: 40px;
 }
 
-.bottom-btn:hover {
+#up1 {
   transform: scale(1.2);
 }
 
-#lock {
+#lock1, #lock2 {
   position: absolute;
   width: 30px;
   margin-left: 5px;
