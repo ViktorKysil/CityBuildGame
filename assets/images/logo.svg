@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" fill="none" viewBox="0 0 160 160">
+  <g filter="url(#filter0_i)">
+    <rect width="140" height="140" x="10" y="10" fill="#373737" rx="10"/>
+  </g>
+  <rect width="150" height="150" x="5" y="5" stroke="#F2C94C" stroke-width="10" rx="15"/>
+  <g filter="url(#filter1_i)">
+    <path fill="#F2C94C" d="M108.518 44.08a3.65 3.65 0 00.684-2.273 3.903 3.903 0 00-.858-2.274l-1.184-1.36c-4.237-4.478-9.455-8.041-15.27-10.43-10.544-4.265-25.178-5.216-42.54 5.54l-8.557-2.292a4.478 4.478 0 00-1.633-.128 4.238 4.238 0 00-1.538.468l-13.045 6.92c-.948.504-1.631 1.348-1.899 2.348-.268.999-.098 2.072.47 2.982l15.656 25.066c.283.453.656.852 1.099 1.175a4.477 4.477 0 003.112.834 4.233 4.233 0 001.537-.468l13.051-6.943c.948-.504 1.631-1.348 1.9-2.348l1.292-4.825 50.141 85.242a4.11 4.11 0 001.017 1.413 4.496 4.496 0 003.313 1.141 4.239 4.239 0 001.692-.479l15.213-8.062a3.783 3.783 0 001.877-2.258 3.753 3.753 0 00-.345-2.908L77.047 45.14c6.987-1.818 16.084-2.48 26.963.435a4.424 4.424 0 002.534-.065 3.953 3.953 0 001.974-1.43z"/>
+  </g>
+  <defs>
+    <filter id="filter0_i" width="160" height="160" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset/>
+      <feGaussianBlur stdDeviation="29"/>
+      <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.27 0"/>
+      <feBlend in2="shape" result="effect1_innerShadow"/>
+    </filter>
+    <filter id="filter1_i" width="154.638" height="141.076" x="3" y="11" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="4"/>
+      <feGaussianBlur stdDeviation="2"/>
+      <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+      <feBlend in2="shape" result="effect1_innerShadow"/>
+    </filter>
+  </defs>
+</svg>

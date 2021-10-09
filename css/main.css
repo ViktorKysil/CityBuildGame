@@ -9,7 +9,7 @@ html {
   background-color: #222222;
   background-image: url(/assets/images/city.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 192%;
 }
 
 body {
@@ -42,20 +42,21 @@ h1 {
 }
 
 #info-frame {
-  float: right;
   margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 #clicker {
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
   border-radius: 10px;
-  text-align: center;
-  float: left;
   /* height: 150px;
     width: 100px; */
   width: 200px;
   height: 200px;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -73,7 +74,7 @@ h1 {
 }
 
 #clicker:hover > img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #restart-btn {
@@ -81,7 +82,8 @@ h1 {
   transition: transform 0.1s;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  height: 50px;
+  width: 50px;
   border: none;
   border-radius: 10px;
   background: rgb(55, 55, 55);
@@ -90,11 +92,15 @@ h1 {
 }
 
 #restart-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #restart-btn img {
-  zoom: 250%;
+  zoom: 150%;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 .side-btn {
@@ -112,16 +118,20 @@ h1 {
 
 .side-btn img {
   width: 40px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 .side-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #bottom-buttons {
   position: absolute;
   top: 365px;
-  margin-right: 160px;
+  margin-right: 155px;
 }
 
 .bottom-btn {
@@ -137,10 +147,14 @@ h1 {
 
 .bottom-btn img {
   width: 40px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
 }
 
 #up1 {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #lock1, #lock2 {
@@ -153,27 +167,43 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 140px;
+  width: 200px;
+  height: 50px;
   border: none;
   border-radius: 10px;
   background: rgb(55, 55, 55);
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
   cursor: pointer;
+  
+}
+
+#buy-btn img,
+#buy-btn span {
   transition: transform 0.1s;
 }
 
-#buy-btn:hover {
-  transform: scale(1.2);
+#buy-btn:hover > img,
+#buy-btn:hover > span  {
+  transform: scale(1.050);
 }
 
-#buy-btn img {
-  zoom: 80%;
-}
+/* #buy-btn img {
+  zoom: 100%;
+} */
 
 #btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
+}
+
+#sys-btns {
+  display: flex;
+  margin-top: 20px;
+}
+
+#sys-btns button:nth-child(1n) {
+  margin-left: 10px;
 }
 
 #score-frame {
@@ -181,7 +211,7 @@ h1 {
   align-items: center;
   justify-content: center;
   background: rgb(55, 55, 55);
-  margin-top: 20px;
+  margin-top: 10px;
   width: 200px;
   height: 50px;
   border-radius: 10px;
@@ -200,6 +230,7 @@ h2 {
 .purchased {
   height: 20px;
   width: 90px;
+  margin-left: 5px;
   border-radius: 5px;
   display: flex;
   justify-content: center;

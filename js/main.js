@@ -1,3 +1,4 @@
+var cityName = ''
 var scorePoint
 var hired = 0
 var workerPrice = 10
@@ -25,6 +26,7 @@ function addScore() {
         document.getElementById('score').innerHTML = scorePoint;
         localStorage.setItem('userScore', scorePoint)
     }
+
 }
 
 function refresh() {
@@ -158,13 +160,18 @@ function upgradeLvl3() {
         return;
     }
 
+    if (localStorage.getItem('userHouseUp') == 1) {
+        alert('To buy this update, other ones must be bought!')
+        return;
+    }
+
     if (scorePoint < house3) {
         alert('You need more money to make this upgrade!')
     } else {
         alert('Residential area improved! New upgrade now available.')
         upgradeHouse = 3
         localStorage.setItem('userHouseUp', upgradeHouse)
-        document.getElementById("up3").innerHTML = '<img src="/assets/images/house-lvl2.svg" alt="" />';
+        document.getElementById("up3").innerHTML = '<img src="/assets/images/house-lvl3.svg" alt="" />';
         document.getElementById("up3").style = "transform: scale(1.2);";
         document.getElementById("up2").style = "transform: scale(1);";
         document.getElementById("up1").style = "transform: scale(1);";
@@ -178,13 +185,18 @@ function upgradeLvl2() {
         return;
     }
 
+    if (localStorage.getItem('userHouseUp') == 3) {
+        alert('Upgrade already bought!')
+        return;
+    }
+
     if (scorePoint < house2) {
         alert('You need more money to make this upgrade!')
     } else {
         alert('Residential area improved! New upgrade now available.')
         upgradeHouse = 2
         localStorage.setItem('userHouseUp', upgradeHouse)
-        document.getElementById("up2").innerHTML = '<img src="/assets/images/house-lvl3.svg" alt="" />';
+        document.getElementById("up2").innerHTML = '<img src="/assets/images/house-lvl2.svg" alt="" />';
         document.getElementById("up2").style = "transform: scale(1.2);";
         document.getElementById("up1").style = "transform: scale(1);";
     }
