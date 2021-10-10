@@ -153,11 +153,24 @@ h1 {
   -o-user-drag: none;
 }
 
-#up1 {
-  transform: scale(1.1);
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-#lock1, #lock2 {
+#lock1,
+#lock2 {
   position: absolute;
   width: 30px;
   margin-left: 5px;
@@ -174,7 +187,6 @@ h1 {
   background: rgb(55, 55, 55);
   box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
   cursor: pointer;
-  
 }
 
 #buy-btn img,
@@ -183,8 +195,8 @@ h1 {
 }
 
 #buy-btn:hover > img,
-#buy-btn:hover > span  {
-  transform: scale(1.050);
+#buy-btn:hover > span {
+  transform: scale(1.05);
 }
 
 /* #buy-btn img {
@@ -241,4 +253,81 @@ h2 {
 
 #logo {
   zoom: 200%;
+}
+
+.welcome-screen {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgb(55, 55, 55);
+  border-radius: 10px;
+  height: 100px;
+  width: 490px;
+}
+
+.welcome-screen button {
+  width: 180px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: rgb(85, 85, 85);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.welcome-screen button:hover {
+  transform: scale(1.1);
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  backdrop-filter: blur(3px);
+}
+
+.restart-screen {
+  position: absolute;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgb(55, 55, 55);
+  border-radius: 10px;
+  height: 100px;
+  width: 490px;
+}
+
+.restart-screen button {
+  width: 180px;
+  height: 40px;
+  margin: 0 20px 0 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: rgb(85, 85, 85);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.restart-screen button:hover {
+  transform: scale(1.1);
 }

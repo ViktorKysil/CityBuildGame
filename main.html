@@ -11,6 +11,16 @@
   <body>
     <!-- <h1>Build Skylines</h1> -->
     <img src="/assets/images/game-logo (3).svg" alt="" id="logo" />
+    <div id="overlay"></div>
+    <div class="welcome-screen">
+      <p id="welcome-text">Welcome to Build the Paradise!</p>
+      <button onclick="gameContinue()">Continue</button>
+    </div>
+    <div class="restart-screen" id="restart-screen">
+      <p id="restart-text">Are you sure? Game will restart!</p>
+      <button id="restart-proceed">Proceed</button>
+      <button onclick="gameContinue()">Back</button>
+    </div>
     <div id="main-frame">
       <div id="side-buttons">
         <button class="side-btn" onclick="restart()">
@@ -34,7 +44,6 @@
         <button class="bottom-btn" id="up1" style="cursor: initial;" onclick="upgradeLvl1()">
           <img src="/assets/images/house-main.svg" alt="" />
         </button>
-
         <button class="bottom-btn" id="up2" onclick="upgradeLvl2()">
           <img src="/assets/images/lockv2.svg" alt="" id="lock1" />
           <img src="/assets/images/house-lvl2.svg" alt="" />

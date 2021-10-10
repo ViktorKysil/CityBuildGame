@@ -31,12 +31,11 @@ function addScore() {
 
 function refresh() {
     if (localStorage.getItem('userScore') == 0) {
-        alert('Welcome to TownClicker!')
         scorePoint = 0
         document.getElementById('score').innerHTML = scorePoint;
         localStorage.setItem('userScore') = 0
     } else
-        alert('Glad to see you again! Your previous score is ' + localStorage.getItem('userScore') + '!')
+        document.getElementById('welcome-text').innerHTML = 'Welcome back! Your previous score is ' + localStorage.getItem('userScore')
     scorePoint = document.getElementById('score').innerHTML = localStorage.getItem('userScore')
     hired = localStorage.getItem('userWorkers')
     localStorage.getItem('hiredLeft')
@@ -88,9 +87,14 @@ function refresh() {
 }
 
 function restart() {
-    if (window.confirm('Are you sure? Game will be restarted!')) {
+    document.getElementById('restart-screen').style = 'display: inherit'
+    document.getElementById('overlay').style = 'display: inherit'
 
-      
+    document.getElementById('restart-proceed').onclick = function () {
+
+        document.getElementById('restart-screen').style = 'display: none'
+        document.getElementById('overlay').style = 'display: none'
+
         upgradeHouse = 1;
         localStorage.setItem('userHouseUp', upgradeHouse)
         document.getElementById("up2").innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock1" /> <img src="/assets/images/house-lvl2.svg" alt="" />';
@@ -112,8 +116,6 @@ function restart() {
             scorePoint = 0
         }
     }
-
-
 }
 
 function hire() {
@@ -156,7 +158,11 @@ function hire() {
 function upgradeLvl3() {
 
     if (localStorage.getItem('userHouseUp') == 3) {
-        alert('Upgrade already bought!')
+        document.getElementById('up3').style = "animation: shake 0.5s; animation-iteration-count: infinite; "
+
+        setTimeout(function () {
+            document.getElementById('up3').style = "transform: scale(1.2);"
+        }, 300)
         return;
     }
 
@@ -181,7 +187,11 @@ function upgradeLvl3() {
 function upgradeLvl2() {
 
     if (localStorage.getItem('userHouseUp') == 2) {
-        alert('Upgrade already bought!')
+        document.getElementById('up2').style = "animation: shake 0.5s; animation-iteration-count: infinite; "
+
+        setTimeout(function () {
+            document.getElementById('up2').style = "transform: scale(1.2);"
+        }, 300)
         return;
     }
 
@@ -202,29 +212,23 @@ function upgradeLvl2() {
     }
 }
 
-function upgradeLvl1 () {
-    alert('Upgrade already bought!')
+function upgradeLvl1() {
+    document.getElementById('up1').style = "animation: shake 0.5s; animation-iteration-count: infinite;"
+
+    setTimeout(function () {
+        document.getElementById('up1').style = ""
+        if (upgradeHouse === 1) {
+            document.getElementById('up1').style = "transform: scale(1.2);"
+        }
+    }, 300)
 }
 
-// function availableCheck1() {
-//     if(((upgradeHouse === 1)) || ((upgradeHouse === 2)) || ((upgradeHouse ===3))){
-//         alert('Upgrade already bought!')
-//     }
-// }
+function gameContinue() {
+    document.querySelector('.welcome-screen').style = 'display: none'
+    document.getElementById('overlay').style = 'display: none'
 
-// function availableCheck2() {
-//     if(upgradeHouse == 2){
-//         alert('Upgrade already bought!')
-//     }
-// }
-
-
-
-// function availableCheck3() {
-//     if(upgradeHouse === 3){
-//         alert('Upgrade already bought!')
-//     }
-// }
+    document.querySelector('.restart-screen').style = 'display: none'
+}
 
 refresh()
 
