@@ -79,7 +79,7 @@ h1 {
 
 #restart-btn {
   display: flex;
-  transition: transform 0.1s;
+ 
   align-items: center;
   justify-content: center;
   height: 50px;
@@ -91,7 +91,11 @@ h1 {
   cursor: pointer;
 }
 
-#restart-btn:hover {
+#restart-btn img {
+  transition: transform 0.1s;
+}
+
+#restart-btn img:hover {
   transform: scale(1.1);
 }
 
@@ -105,7 +109,7 @@ h1 {
 
 .side-btn {
   display: flex;
-  transition: transform 0.1s;
+  
   align-items: center;
   justify-content: center;
   padding: 5px;
@@ -117,6 +121,7 @@ h1 {
 }
 
 .side-btn img {
+  transition: transform 0.1s;
   width: 40px;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -124,7 +129,7 @@ h1 {
   -o-user-drag: none;
 }
 
-.side-btn:hover {
+.side-btn img:hover {
   transform: scale(1.1);
 }
 
@@ -304,7 +309,7 @@ h2 {
   display: none;
   margin-left: auto;
   margin-right: auto;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   right: 0;
   text-align: center;
@@ -329,5 +334,64 @@ h2 {
 }
 
 .restart-screen button:hover {
+  transform: scale(1.1);
+}
+
+.settings-screen {
+  list-style: none;
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgb(55, 55, 55);
+  border-radius: 10px;
+  height: 300px;
+  width: 490px;
+}
+
+.settings-screen button {
+  width: 180px;
+  height: 40px;
+  margin-top: 15px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  background: rgb(85, 85, 85);
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.settings-screen button:hover {
+  transform: scale(1.1);
+}
+
+.credits-screen {
+  list-style: none;
+  display: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgb(55, 55, 55);
+  border-radius: 10px;
+  height: 300px;
+  width: 490px;
+}
+
+#settings-text {
+  zoom: 60%;
+}
+
+.credits-screen button:hover {
   transform: scale(1.1);
 }

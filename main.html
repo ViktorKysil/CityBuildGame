@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/faviconv2.svg" />
     <title>Build the Paradise</title>
   </head>
   <body>
     <!-- <h1>Build Skylines</h1> -->
-    <img src="/assets/images/game-logo (3).svg" alt="" id="logo" />
-    <div id="overlay"></div>
+    <img src="/assets/images/logov3.svg" alt="" id="logo" />
+    <div id="overlay" onclick="closeMenu()"></div>
     <div class="welcome-screen">
       <p id="welcome-text">Welcome to Build the Paradise!</p>
       <button onclick="gameContinue()">Continue</button>
@@ -20,6 +20,19 @@
       <p id="restart-text">Are you sure? Game will restart!</p>
       <button id="restart-proceed">Proceed</button>
       <button onclick="gameContinue()">Back</button>
+    </div>
+    <div class="settings-screen" id="restart-screen">
+      <p id="settings-text">Settings</p>
+      <li><button>Cheat menu</button></li>
+      <li><button onclick="restart()">Restart game</button></li>
+      <li><button>Roadmap</button></li>
+      <li><button onclick="credits()">Credits</button></li>
+    </div>
+    <div class="credits-screen" id="restart-screen">
+      <p id="settings-text"><img src="/assets/images/logov3.svg" alt=""></p>
+      <p>Game Created by Viktor Kisel - 2021</p>
+      <p>Thank you so much for playing!</p>
+      <span><a href="https://github.com/ViktorKysil/CityBuildGame" target="_blank"><img src="/assets/images/icons8-github.svg" alt="" style="zoom: 140%"><a href="https://www.instagram.com/_viktorkisel_/" target="_blank"><img src="/assets/images/icons8-instagram.svg" alt="" style="zoom: 140%; margin-left: 10px;"></a></span>
     </div>
     <div id="main-frame">
       <div id="side-buttons">
@@ -75,7 +88,7 @@
         <button id="restart-btn" onclick="restart()">
           <img src="/assets/images/medal.svg" alt="" />
         </button>
-        <button id="restart-btn" onclick="restart()">
+        <button id="restart-btn" onclick="settings()">
           <img src="/assets/images/settings2.svg" alt="" />
         </button>
         </div>

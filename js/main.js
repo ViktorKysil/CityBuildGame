@@ -40,6 +40,13 @@ function refresh() {
     hired = localStorage.getItem('userWorkers')
     localStorage.getItem('hiredLeft')
 
+    if (localStorage.getItem('userHouseUp') == 1) {
+        upgradeHouse = 1
+        document.getElementById("up1").style = "transform: scale(1.2);";
+        document.getElementById("up3").style = "transform: scale(1);";
+        document.getElementById("up2").style = "transform: scale(1);";
+    }
+
     if (localStorage.getItem('userHouseUp') == 2) {
         upgradeHouse = 2
         document.getElementById("up2").innerHTML = '<img src="/assets/images/house-lvl2.svg" alt="" />';
@@ -89,6 +96,10 @@ function refresh() {
 function restart() {
     document.getElementById('restart-screen').style = 'display: inherit'
     document.getElementById('overlay').style = 'display: inherit'
+
+    if (document.querySelector('.settings-screen').style = 'display: inherit') {
+        document.querySelector('.settings-screen').style = 'display: none'
+    }
 
     document.getElementById('restart-proceed').onclick = function () {
 
@@ -228,6 +239,27 @@ function gameContinue() {
     document.getElementById('overlay').style = 'display: none'
 
     document.querySelector('.restart-screen').style = 'display: none'
+}
+
+function closeMenu() {
+    document.querySelector('.welcome-screen').style = 'display: none'
+    document.getElementById('overlay').style = 'display: none'
+
+    document.querySelector('.restart-screen').style = 'display: none'
+    document.querySelector('.settings-screen').style = 'display: none'
+
+    document.querySelector('.credits-screen').style = 'display: none'
+    document.getElementById('overlay').style = 'display: none'
+}
+
+function settings() {
+    document.querySelector('.settings-screen').style = 'display: inherit'
+    document.getElementById('overlay').style = 'display: inherit'
+}
+
+function credits() {
+    document.querySelector('.credits-screen').style = 'display: inherit'
+    document.getElementById('overlay').style = 'display: inherit'
 }
 
 refresh()
