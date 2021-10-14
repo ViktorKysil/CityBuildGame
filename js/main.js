@@ -262,6 +262,15 @@ function credits() {
     document.getElementById('overlay').style = 'display: inherit'
 }
 
+function office() {
+    document.getElementById('clicker').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
+    document.getElementById('clicker').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
+    
+    document.getElementById('up1').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
+    document.getElementById('up2').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock1" /> <embed src="/assets/images/office-lvl2.svg">'
+    document.getElementById('up3').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock2" /> <embed src="/assets/images/office-lvl3.svg">'
+}
+
 refresh()
 
 

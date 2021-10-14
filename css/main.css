@@ -150,7 +150,7 @@ h1 {
   cursor: pointer;
 }
 
-.bottom-btn img {
+.bottom-btn img, .bottom-btn embed {
   width: 40px;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
