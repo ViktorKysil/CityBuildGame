@@ -1,4 +1,5 @@
 var cityName = ''
+var buildMode = 'house'
 var scorePoint
 var hired = 0
 var workerPrice = 10
@@ -263,12 +264,29 @@ function credits() {
 }
 
 function office() {
+    buildMode = 'office'
+    localStorage.setItem('buildMode', buildMode)
+
     document.getElementById('clicker').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
-    document.getElementById('clicker').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
-    
+
+    document.getElementById('')
+
     document.getElementById('up1').innerHTML = '<img src="/assets/images/office-logo.svg" alt="" />'
     document.getElementById('up2').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock1" /> <embed src="/assets/images/office-lvl2.svg">'
     document.getElementById('up3').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock2" /> <embed src="/assets/images/office-lvl3.svg">'
+}
+
+function house() {
+    buildMode = 'house'
+    localStorage.setItem('buildMode', buildMode)
+
+    document.getElementById('clicker').innerHTML = '<img src="/assets/images/house-main.svg" alt="" />'
+
+    document.getElementById('')
+
+    document.getElementById('up1').innerHTML = ' <img src="/assets/images/house-main.svg" alt="" />'
+    document.getElementById('up2').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock1" /> <embed src="/assets/images/house-lvl2.svg">'
+    document.getElementById('up3').innerHTML = '<img src="/assets/images/lockv2.svg" alt="" id="lock2" /> <embed src="/assets/images/house-lvl3.svg">'
 }
 
 refresh()
